@@ -15,5 +15,7 @@ def edit_dist(str1,str2):
                 dp[i][j]=dp[i-1][j-1]
             else:
                 dp[i][j]=1+min(dp[i-1][j-1],dp[i][j-1],dp[i-1][j])
+    print(dp)
     return dp[n][m]
-print(edit_dist("cat","cut"))
+print(edit_dist("saturday","sunday"))
+#[[0, 1, 2, 3, 4, 5], [1, 1, 2, 3, 3, 4], [2, 2, 2, 3, 4, 4], [3, 2, 3, 3, 4, 5], [4, 3, 3, 4, 4, 5], [5, 4, 4, 3, 4, 5], [6, 5, 5, 4, 3, 4], [7, 6, 6, 5, 4, 3]]
