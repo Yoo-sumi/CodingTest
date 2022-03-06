@@ -1,46 +1,54 @@
 from collections import deque
 import copy
-n=4
-degree=[0]*(n+1)
-
+n=3
+m=0
 data=list(map(int,input().split()))
+graph=[[] for i in range(n+1)]
+degree=[0]*(n+1)
+for i in range(n):
+    for j in range(i+1,n):
+        a=data[i]
+        b=data[j]
+        graph[a].append(b)
+        degree[b]+=1
 
-graph=[[] for _ in range(n+1)]
-graph_copy=[[] for _ in range(n+1)]
-
-for i in range(n-1,0,-1):
-    graph[data[i]].append(data[i-1])
-    degree[data[i-1]]+=1
-graph_copy=copy.deepcopy(graph)
-m=3
 for i in range(m):
-    a,b=map(int,input().split())
-    if graph[b].count(a)>0:
-        print("IMPOSSIBLE")
-        break
-    if graph[a].count(b)>0:
-        graph[a].remove(b)
-        degree[b]-=1
-        for j in graph_copy[b]:
-            graph[a].append(j)
-            graph[b].remove(j)
-    graph[b].append(a)
-    degree[a]+=1
-print(degree)
-print(graph)
+    x,y=map(int,input().split())
+    if graph[x].count(y)>0:
+        degree[y]+=1
+        continue
+    graph[x].append((y))
+    graph[y].remove((x))
+    degree[y]+=1
+    degree[x]-=1
+
 def topology_sort():
     q=deque()
     result=[]
+    cycle=False
+    certain=True
     for i in range(1,n+1):
         if degree[i]==0:
             q.append(i)
-    while q:
+
+    for ii in range(n):
+        if len(q)==0:
+            cycle=True
+            break
+        if len(q)>=2:
+            certain=False
+            break
         now=q.popleft()
         result.append(now)
-
         for i in graph[now]:
             degree[i]-=1
             if degree[i]==0:
                 q.append(i)
-    print(result)
+    if cycle==True:
+        print("IMPOSSIBLE")
+    elif certain==False:
+        print("?")
+    else:
+        print(result)
 topology_sort()
+
