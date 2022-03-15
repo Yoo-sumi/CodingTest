@@ -20,14 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8bd77ae-8514-4cca-be1c-d4830d3ab242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p.111.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p.113.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p.115.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p.118.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,5 +214,9 @@
     </state>
     <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1646987497442" />
     <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.822@0.23.1440.822" timestamp="1646930491520" />
+    <state x="88" y="96" key="new project wizard" timestamp="1647332719573">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="88" y="96" key="new project wizard/0.23.1440.823@0.23.1440.823" timestamp="1647332719573" />
   </component>
 </project>
