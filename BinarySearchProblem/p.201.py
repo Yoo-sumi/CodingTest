@@ -1,4 +1,4 @@
-n,m=4,6
+n,m=4,7
 array=[19,15,10,17]
 array.sort()
 def get_value(v):
