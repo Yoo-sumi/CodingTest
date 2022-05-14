@@ -23,5 +23,6 @@ for _ in range(m):
             result.append("YES")
         else:
             result.append("NO")
+    print(parent)
 for i in result:
     print(i)
