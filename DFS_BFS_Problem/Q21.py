@@ -15,14 +15,11 @@ array=[
     [20,30,25],
     [40,22,10]
 ]'''
-N,L,R=4,10,50
-array=[
-    [10,100,20,90],
-    [80,100,60,70],
-    [70,20,30,40],
-    [50,20,100,10]
-]
+N,L,R=map(int,input().split())
 
+array=[[] for _ in range(N)]
+for i in range(N):
+    array[i]=list(map(int,input().split()))
 q=deque()
 dx=[1,-1,0,0]
 dy=[0,0,1,-1]
